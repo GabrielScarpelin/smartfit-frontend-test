@@ -1,0 +1,72 @@
+.main {
+  height: 100%;
+  width: 100%;
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 67%;
+  margin-inline: auto;
+  padding-top: 4rem;
+}
+.title::after { 
+  content: "";
+  display: block;
+  width: 96px;
+  height: 8px;
+  background-color: #333333;
+  margin-top: 1.5rem;
+}
+
+.titleText{
+  color: #333333;
+}
+
+.cardFilters{
+  border: 2px solid #808080;
+  border-bottom: 4px solid #808080;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.lineAfter::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #b6b6b6;
+  margin-top: 8px;
+}
+
+.rowSearchFilters{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.rowButtons{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 2rem;
+}
+.button {
+  width: 35%;
+  height: 3rem;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.button:active{
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.50),
+            1px 1px 15px 2px rgba(154, 137, 164, 0.1);
+}
