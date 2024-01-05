@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 
 const GothamLight = localFont({ src: "../app/fonts/gotham-light.woff2" });
-export default function TimeSelection({ range, turno }) {
+export default function TimeSelection({ range, turno, setTimeSelected }) {
   return (
     <div
       style={{
@@ -11,7 +11,14 @@ export default function TimeSelection({ range, turno }) {
       }}
     >
       <div style={{ display: "flex", gap: 8 }}>
-        <input type="radio" value={`${range.toString()}`} name="time" />
+        <input
+          type="radio"
+          value={`${range.toString()}`}
+          name="time"
+          onClick={(e) => {
+            setTimeSelected(e.target.value);
+          }}
+        />
         <p className={GothamLight.className}>{`${turno}`}</p>
       </div>
       <p className={GothamLight.className}>

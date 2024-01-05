@@ -5,10 +5,10 @@
 .header {
   display: flex;
   width: 100%;
-  height: 15%;
   background-color: black;
   justify-content: center;
   align-items: center;
+  padding-block: 2rem;
 }
 .wrapper {
   width: 67%;
@@ -28,7 +28,7 @@
   color: #333333;
 }
 
-.cardFilters{
+.filtersContainer{
   border: 2px solid #808080;
   border-bottom: 4px solid #808080;
   border-radius: 4px;
@@ -69,4 +69,57 @@
 .button:active{
   box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.50),
             1px 1px 15px 2px rgba(154, 137, 164, 0.1);
+}
+
+.legendContainer{
+  display: flex;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin-top: 3rem;
+  padding-block: 20px;
+  padding-inline: 12px;
+  flex-wrap: wrap ;
+  align-items: center;
+  row-gap: 16px;
+  border-radius: 4px;
+  column-gap: 8px;
+}
+
+.gymsContainer{
+  width: 100%;
+  background-color: #FFF;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardsContainer {
+  padding: 12px;
+}
+.cardsContainer::-webkit-scrollbar-button {
+  display: none;
+}
+.cardsContainer::-webkit-scrollbar {
+  width: 10px;
+  background-color: #333333;
+  border-radius: 8px;
+}
+/* Handle */
+.cardsContainer::-webkit-scrollbar-thumb {
+  background: #FFB612; 
+  border-radius: 8px;
+  border: 3px solid #333333;
+  width: 6rem;
+}
+
+.footer {
+  background-color: #333333;
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  row-gap: 1rem;
 }

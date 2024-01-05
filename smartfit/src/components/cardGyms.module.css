@@ -1,0 +1,30 @@
+.open {
+    color: #2FC022;
+}
+.closed {
+    color: #dc0a17;
+}
+
+.fontGymStatus {
+    font-size: .75rem;
+}
+.gymTitle {
+    font-size: 1.2rem;
+    color: #333333;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.lineAfter::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #b6b6b6;
+  margin-top: .5rem;
+}
+.scheduleContainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    margin-top: 1rem;
+}
