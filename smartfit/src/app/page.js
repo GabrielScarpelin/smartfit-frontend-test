@@ -17,7 +17,7 @@ function RenderCards({ cards }) {
       {cards.map((value, index) => {
         return (
           <Card
-            key={`${value.id}${value.title}`}
+            key={`${value.id}${value.title}`} //ISSO AQUI NÃO É RECOMENDADO, NO ENTANTO OS DADOS DE ENTRADA ESTÃO BAGUNÇADOS E EXISTEM MAIS ACADEMIAS COM O MESMO ID. QUE, POR SUA VEZ, RESULTOU EM ERRO NO CÓDIGO
             gymName={value.title}
             gymAdress={
               value.content ||
