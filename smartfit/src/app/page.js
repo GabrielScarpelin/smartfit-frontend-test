@@ -17,7 +17,7 @@ function RenderCards({ cards }) {
       {cards.map((value, index) => {
         return (
           <Card
-            key={value.id}
+            key={`${value.id}${value.title}`}
             gymName={value.title}
             gymAdress={
               value.content ||

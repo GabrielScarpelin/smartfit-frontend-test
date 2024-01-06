@@ -17,15 +17,7 @@ export default function Card({
   gymSchedules,
 }) {
   return (
-    <div
-      style={{
-        backgroundColor: "#f0f0f0",
-        minWidth: "30%",
-        padding: 16,
-        borderRadius: 8,
-        boxShadow: "rgba(0, 0, 0, 0.35) 0px 2px 10px",
-      }}
-    >
+    <div className={styles.gymCard}>
       <p
         className={`${gymStatus ? styles.open : styles.closed} ${
           GothamBold.className
@@ -45,11 +37,9 @@ export default function Card({
           minHeight: "3rem",
         }}
       >
-        {gymStatus
-          ? gymAdress
-              .replace(/<[^>]*(>|$)|&nbsp;|&zwnj;|&raquo;|&laquo;|&gt;/g, " ")
-              .replace("&#8211;", "-")
-          : ""}
+        {gymAdress
+          .replace(/<[^>]*(>|$)|&nbsp;|&zwnj;|&raquo;|&laquo;|&gt;/g, " ")
+          .replace("&#8211;", "-")}
       </p>
       <div className={styles.lineAfter}></div>
       {gymStatus ? (
@@ -91,9 +81,9 @@ export default function Card({
             />
           </div>
           <div className={styles.scheduleContainer}>
-            {gymSchedules.map((value) => {
+            {gymSchedules.map((value, index) => {
               return (
-                <div style={{}}>
+                <div style={{}} key={`${gymName}${gymAdress}${index}`}>
                   <h2 className={`${styles.gymTitle} ${GothamBold.className}`}>
                     {value.weekdays}
                   </h2>
